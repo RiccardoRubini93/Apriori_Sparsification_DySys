@@ -13,7 +13,9 @@ const M,N = 40,20
 
 println("System dymension $M x $N")
 
-const Q = reshape(readdlm("Data_2D_2e4/Q.txt"),200,200,200)[1:M,1:M,1:M]
+#for demostration purposes we load a reduced dataset composed by N_mod = 50 modes
+
+const Q = reshape(readdlm("Data_2D_2e4/Q.txt"),N_mod,N_mod,N_mod)[1:M,1:M,1:M]
 const L = readdlm("Data_2D_2e4/L.txt")[1:M,1:M]
 const a = readdlm("Data_2D_2e4/a.txt")[:,1:M]
 
